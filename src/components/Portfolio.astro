@@ -1,0 +1,218 @@
+---
+// The portfolio page, rendered from src/data/cv.json in any locale.
+// One component serves every language: / (default locale) and /<locale>/.
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import cv from '../data/cv.json';
+import { LOCALES } from '../lib/locales.js';
+import { L, cvFileName, getAvailableLocales, t } from '../lib/i18n.js';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '../styles/global.css';
+
+const { locale } = Astro.props;
+const available = getAvailableLocales(cv);
+const profile = cv.profile;
+const ui = cv.ui;
+const contact = profile.contact;
+
+// CV download links for every shipped locale, e.g.
+//   CV — English: PDF · Markdown · Español: PDF · Markdown
+const cvLinks = available.map((code) => ({
+  code,
+  name: LOCALES.find((l) => l.code === code)?.name ?? code,
+  pdf: `/${cvFileName(code, 'pdf')}`,
+  md: `/${cvFileName(code, 'md')}`,
+}));
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{L(cv.meta.title, locale)}</title>
+    <meta name="description" content={L(cv.meta.description, locale)} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <nav class="lang-switch" aria-label={t(ui.language, locale)}>
+          {
+            available.map((code, i) => (
+              <>
+                {i > 0 && <span aria-hidden="true"> · </span>}
+                {code === locale ? (
+                  <span class="current" aria-current="true">
+                    {LOCALES.find((l) => l.code === code)?.label ?? code}
+                  </span>
+                ) : (
+                  <a href={getRelativeLocaleUrl(code)}>
+                    {LOCALES.find((l) => l.code === code)?.label ?? code}
+                  </a>
+                )}
+              </>
+            ))
+          }
+        </nav>
+        <h1>{profile.name}</h1>
+        <p class="tagline">
+          {L(profile.shortRole, locale)} — {profile.location}
+        </p>
+        <p class="contact">
+          <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          &nbsp;·&nbsp;
+          <a href={contact.github.url}>{contact.github.label}</a>
+          &nbsp;·&nbsp;
+          <a href={contact.x.url}>{contact.x.label}</a>
+          &nbsp;·&nbsp;
+          <a href={contact.hive.url}>{contact.hive.label}</a>
+          &nbsp;·&nbsp;
+          <a href={contact.phoneHref}>{contact.phone}</a>
+        </p>
+        <p class="cv-links">
+          CV — {
+            cvLinks.map((entry, i) => (
+              <>
+                {i > 0 && <span aria-hidden="true"> · </span>}
+                <span>
+                  {entry.name}: <a href={entry.pdf}>PDF</a>
+                  {' · '}
+                  <a href={entry.md}>Markdown</a>
+                </span>
+              </>
+            ))
+          }
+        </p>
+        <p class="cv-note">{L(ui.cvNote, locale)}</p>
+      </header>
+
+      <main>
+        <section id="summary">
+          <h2>{L(ui.summary, locale)}</h2>
+          <p>{L(cv.summary, locale)}</p>
+        </section>
+
+        <section id="skills">
+          <h2>{L(ui.skills, locale)}</h2>
+          {
+            cv.skills.map((group) => (
+              <p>
+                <strong>{L(group.label, locale)}:</strong> {L(group.items, locale)}
+              </p>
+            ))
+          }
+        </section>
+
+        <section id="featured-project">
+          <h2>{L(ui.featuredProject, locale)}</h2>
+          <h3>{L(cv.featuredProject.title, locale)}</h3>
+          <p class="meta">{L(cv.featuredProject.meta, locale)}</p>
+          <p>{L(cv.featuredProject.intro, locale)}</p>
+          <ul>
+            {
+              cv.featuredProject.bullets.map((b) => (
+                <li>
+                  <strong>{b.label}:</strong> {L(b.text, locale)}
+                </li>
+              ))
+            }
+          </ul>
+          <p>{L(cv.featuredProject.outro, locale)}</p>
+          <p>{L(cv.featuredProject.comingNext, locale)}</p>
+          <p class="project-links">
+            {L(cv.featuredProject.linksNote, locale)} ·{' '}
+            {
+              cv.featuredProject.links.map((link, i) => (
+                <>
+                  {i > 0 && ' '}
+                  <a href={link.url}>{link.label}</a>
+                </>
+              ))
+            }
+          </p>
+        </section>
+
+        <section id="projects">
+          <h2>{L(ui.moreProjects, locale)}</h2>
+          {
+            cv.projects.map((project) => (
+              <>
+                <h3>
+                  {project.title}
+                  {project.status && (
+                    <span class="status-text"> · {L(project.status, locale)}</span>
+                  )}
+                </h3>
+                <p>{L(project.description, locale)}</p>
+              </>
+            ))
+          }
+        </section>
+
+        <section id="experience">
+          <h2>{L(ui.experience, locale)}</h2>
+          {
+            cv.experience.map((job) => (
+              <>
+                <h3>
+                  {L(job.role, locale)}
+                  {job.company && <> — {L(job.company, locale)}</>}
+                </h3>
+                <p class="meta">
+                  {L(job.location, locale)}
+                  {job.dates && <> · {L(job.dates, locale)}</>}
+                </p>
+                <ul>
+                  {job.bullets.map((bullet) => (
+                    <li>{L(bullet, locale)}</li>
+                  ))}
+                </ul>
+              </>
+            ))
+          }
+        </section>
+
+        <section id="education">
+          <h2>{L(ui.education, locale)}</h2>
+          <p>
+            <strong>{L(cv.education.degree, locale)}</strong>
+            {' — '}
+            {L(cv.education.school, locale)} · {cv.education.years}
+          </p>
+        </section>
+
+        <section id="languages">
+          <h2>{L(ui.languages, locale)}</h2>
+          <p>
+            {
+              cv.languages.map((lang, i) => (
+                <>
+                  {i > 0 && <br />}
+                  {L(lang.name, locale)} — {L(lang.level, locale)}
+                </>
+              ))
+            }
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          {L(ui.footerContact, locale)}:{' '}
+          <a href={`mailto:${contact.email}`}>{contact.email}</a>.{' '}
+          {L(ui.footerCv, locale)}{' '}
+          <a href={`/${cvFileName(locale, 'pdf')}`}>PDF</a>
+          {' '}{L(ui.or, locale)}{' '}
+          <a href={`/${cvFileName(locale, 'md')}`}>Markdown</a>.
+        </p>
+        <p>
+          {profile.name} · {L(profile.shortRole, locale)} · {profile.location} ·{' '}
+          {L(ui.footerDate, locale)}
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

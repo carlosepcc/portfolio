@@ -24,9 +24,20 @@ export function yearsOfExperience(refDate = new Date()) {
   return Math.floor((months / 12) * 10) / 10;
 }
 
-/** "3.5 years", "4 years", … — the label as it appears in prose. */
-export function yearsLabel(refDate = new Date()) {
+/** "3.5 years", "4 years", … — the label as it appears in prose.
+ *  Locale-aware: the decimal separator and the unit word follow the
+ *  locale (English "6.5 years", Spanish "6,5 años"). The first argument
+ *  may also be a Date, for callers that only pass a reference date. */
+export function yearsLabel(locale = 'en', refDate = new Date()) {
+  if (locale instanceof Date) {
+    refDate = locale;
+    locale = 'en';
+  }
   const y = yearsOfExperience(refDate);
-  const n = Number.isInteger(y) ? String(y) : y.toFixed(1);
-  return `${n} years`;
+  const n = Number.isInteger(y)
+    ? String(y)
+    : y.toFixed(1).replace('.', locale === 'es' ? ',' : '.');
+  const unit =
+    locale === 'es' ? (y === 1 ? 'año' : 'años') : y === 1 ? 'year' : 'years';
+  return `${n} ${unit}`;
 }

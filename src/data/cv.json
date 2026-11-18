@@ -1,0 +1,410 @@
+{
+  "education": {
+    "degree": {
+      "en": "Engineer in Computer Sciences",
+      "es": "Ingeniero en Ciencias Informáticas"
+    },
+    "school": {
+      "en": "University of Computer Sciences (UCI), Havana, Cuba",
+      "es": "Universidad de Ciencias Informáticas (UCI), La Habana, Cuba"
+    },
+    "years": "2017 – 2022"
+  },
+  "experience": [
+    {
+      "bullets": [
+        {
+          "en": "Remediated backend architecture (ExpressJS, Prisma): introduced Zod validation and improved scalability and maintainability.",
+          "es": "Remedié la arquitectura backend (ExpressJS, Prisma): introduje validación con Zod y mejoré la escalabilidad y la mantenibilidad."
+        }
+      ],
+      "company": {
+        "en": "Independent Client, US-Based",
+        "es": "Cliente independiente, con sede en EE. UU."
+      },
+      "dates": {
+        "en": "January 2026 – February 2026",
+        "es": "enero de 2026 – febrero de 2026"
+      },
+      "location": {
+        "en": "Remote",
+        "es": "Remoto"
+      },
+      "role": {
+        "en": "Backend Developer (Contract)",
+        "es": "Desarrollador Backend (Contrato)"
+      }
+    },
+    {
+      "bullets": [
+        {
+          "en": "Built B2B collaboration modules with Vue, TypeScript and TailwindCSS, working directly with product teams.",
+          "es": "Construí módulos de colaboración B2B con Vue, TypeScript y TailwindCSS, trabajando directamente con los equipos de producto."
+        },
+        {
+          "en": "Presented UX solutions to clients and led knowledge-sharing sessions on Material You.",
+          "es": "Presenté soluciones de UX a clientes y lideré sesiones de intercambio de conocimiento sobre Material You."
+        }
+      ],
+      "company": "DaraServices",
+      "dates": {
+        "en": "January 2025 – June 2025",
+        "es": "enero de 2025 – junio de 2025"
+      },
+      "location": {
+        "en": "Remote, Mexico",
+        "es": "Remoto, México"
+      },
+      "role": {
+        "en": "Frontend Developer",
+        "es": "Desarrollador Frontend"
+      }
+    },
+    {
+      "bullets": [
+        {
+          "en": "Led frontend development for AI e-commerce services with Nuxt.",
+          "es": "Lideré el desarrollo frontend de servicios de comercio electrónico con IA usando Nuxt."
+        },
+        {
+          "en": "Presented technical demos to investors and client stakeholders; integrated Figma UX prototyping, SEO and AI image-generation features.",
+          "es": "Presenté demostraciones técnicas a inversores y partes interesadas de clientes; integré prototipado de UX en Figma, SEO y funciones de generación de imágenes con IA."
+        }
+      ],
+      "company": "NataSquad",
+      "dates": {
+        "en": "April 2023 – September 2024",
+        "es": "abril de 2023 – septiembre de 2024"
+      },
+      "location": {
+        "en": "Remote, France",
+        "es": "Remoto, Francia"
+      },
+      "role": {
+        "en": "Frontend Developer, AI and E-Commerce",
+        "es": "Desarrollador Frontend, IA y Comercio Electrónico"
+      }
+    },
+    {
+      "bullets": [
+        {
+          "en": "Taught AI and machine learning to 200+ students through lectures and workshops; delivered talks on emerging AI trends and built course materials bridging theory with practical engineering (Python).",
+          "es": "Enseñé IA y aprendizaje automático a más de 200 estudiantes mediante clases y talleres; realicé charlas sobre tendencias emergentes de IA y creé materiales de curso que conectan la teoría con la ingeniería práctica (Python)."
+        }
+      ],
+      "company": {
+        "en": "University of Computer Sciences (UCI)",
+        "es": "Universidad de Ciencias Informáticas (UCI)"
+      },
+      "dates": {
+        "en": "February 2023 – July 2025",
+        "es": "febrero de 2023 – julio de 2025"
+      },
+      "location": {
+        "en": "Havana, Cuba",
+        "es": "La Habana, Cuba"
+      },
+      "role": {
+        "en": "AI / ML Lecturer",
+        "es": "Profesor de IA / ML"
+      }
+    },
+    {
+      "bullets": [
+        {
+          "en": "Built e-commerce platforms with direct client contact on requirements and sprint reviews.",
+          "es": "Construí plataformas de comercio electrónico con contacto directo con los clientes en requisitos y revisiones de sprint."
+        }
+      ],
+      "company": "JadeTech Group",
+      "dates": {
+        "en": "November 2023 – February 2024",
+        "es": "noviembre de 2023 – febrero de 2024"
+      },
+      "location": {
+        "en": "Havana, Cuba",
+        "es": "La Habana, Cuba"
+      },
+      "role": {
+        "en": "Frontend Web Developer",
+        "es": "Desarrollador Web Frontend"
+      }
+    }
+  ],
+  "featuredProject": {
+    "bullets": [
+      {
+        "label": "Pizarra",
+        "text": {
+          "en": "Balance dashboard (balance, data, voice, bonuses, SMS) queried over USSD, dual-SIM support.",
+          "es": "Panel de saldos (saldo, datos, voz, bonos, SMS) consultado por USSD, con soporte dual-SIM."
+        }
+      },
+      {
+        "label": "Banca",
+        "text": {
+          "en": "Bank accounts with biometric-protected PIN storage, transfers and online payments.",
+          "es": "Cuentas bancarias con almacenamiento de PIN protegido por biometría, transferencias y pagos en línea."
+        }
+      },
+      {
+        "label": "Mensajes",
+        "text": {
+          "en": "Inbox organised by sender instead of a chronological dump.",
+          "es": "Bandeja de entrada organizada por remitente en lugar de un volcado cronológico."
+        }
+      }
+    ],
+    "comingNext": {
+      "en": "Coming next: home-internet support.",
+      "es": "Próximamente: soporte para internet en el hogar."
+    },
+    "intro": {
+      "en": "Android app I designed, architected and developed solo — it started as an experiment to organise banking SMS and grew into a full utility hub:",
+      "es": "Aplicación Android que diseñé, arquitecté y desarrollé en solitario — empezó como un experimento para organizar los SMS bancarios y creció hasta convertirse en un centro de utilidades completo:"
+    },
+    "links": [
+      {
+        "label": "Apklis",
+        "url": "https://hivepen.com/apps/carlito/get/apklis"
+      },
+      {
+        "label": "Zapstore",
+        "url": "https://hivepen.com/apps/carlito/get/zapstore"
+      },
+      {
+        "label": "CuCoders",
+        "url": "https://cucoders.dev/apps/carlosepcc/carlito/"
+      }
+    ],
+    "linksNote": {
+      "en": "Published on Apklis (315 CUP) and Zapstore",
+      "es": "Publicado en Apklis (315 CUP) y Zapstore"
+    },
+    "meta": {
+      "en": "Sole developer · Kotlin, Jetpack Compose · In beta (0.x)",
+      "es": "Único desarrollador · Kotlin, Jetpack Compose · En beta (0.x)"
+    },
+    "outro": {
+      "en": "Architecture documented as living documents alongside the code; Flutter migration in progress.",
+      "es": "Arquitectura documentada como documentos vivos junto al código; migración a Flutter en curso."
+    },
+    "title": {
+      "en": "Carlito — Native Android Utility Hub for Daily Life in Cuba",
+      "es": "Carlito — Centro de utilidades Android nativo para la vida diaria en Cuba"
+    }
+  },
+  "languages": [
+    {
+      "level": {
+        "en": "Native",
+        "es": "Nativo"
+      },
+      "name": {
+        "en": "Spanish",
+        "es": "Español"
+      }
+    },
+    {
+      "level": {
+        "en": "C1 Proficient, EF SET Certification",
+        "es": "C1 Proficient, certificación EF SET"
+      },
+      "name": {
+        "en": "English",
+        "es": "Inglés"
+      }
+    }
+  ],
+  "meta": {
+    "description": {
+      "en": "Carlos Enrique Piñeiro is a software engineer in Santa Clara, Cuba, building end-to-end as an AI-augmented developer. Solo developer of Carlito, a native Android utility hub for daily life in Cuba.",
+      "es": "Carlos Enrique Piñeiro es un ingeniero de software en Santa Clara, Cuba, que construye de principio a fin como desarrollador potenciado por IA. Desarrollador único de Carlito, un centro de utilidades Android nativo para la vida diaria en Cuba."
+    },
+    "title": {
+      "en": "Carlos Enrique Piñeiro — Software Engineer",
+      "es": "Carlos Enrique Piñeiro — Ingeniero de software"
+    }
+  },
+  "profile": {
+    "contact": {
+      "email": "carlosepc.com@gmail.com",
+      "github": {
+        "label": "github.com/carlosepcc",
+        "url": "https://github.com/carlosepcc"
+      },
+      "hive": {
+        "label": "hive.blog/@carlosepc",
+        "url": "https://hive.blog/@carlosepc"
+      },
+      "hivepen": {
+        "label": "hivepen.com",
+        "url": "https://hivepen.com"
+      },
+      "phone": "+53 5506 2672",
+      "phoneHref": "tel:+5355062672",
+      "website": {
+        "label": "carlosepcc.github.io",
+        "url": "https://carlosepcc.github.io"
+      },
+      "x": {
+        "label": "x.com/carlosepcc",
+        "url": "https://x.com/carlosepcc"
+      }
+    },
+    "location": "Santa Clara, Cuba",
+    "name": "Carlos Enrique Piñeiro",
+    "role": {
+      "en": "Software Engineer — Full-Stack",
+      "es": "Ingeniero de software — Full-Stack"
+    },
+    "shortRole": {
+      "en": "Software Engineer",
+      "es": "Ingeniero de software"
+    }
+  },
+  "projects": [
+    {
+      "description": {
+        "en": "Android client for managing home-internet accounts, rebuilt from an open-source tool. Planned open-source.",
+        "es": "Cliente Android para gestionar cuentas de internet en el hogar, reconstruido a partir de una herramienta de código abierto. Planeado como código abierto."
+      },
+      "status": null,
+      "title": "Meco"
+    },
+    {
+      "description": {
+        "en": "My own product studio and live website: Hivepen Studio (workspace for Hive creators), Genioo (brain-training games), Gloti (language learning through stories).",
+        "es": "Mi propio estudio de productos y su sitio web en vivo: Hivepen Studio (espacio de trabajo para creadores de Hive), Genioo (juegos de entrenamiento cerebral), Gloti (aprendizaje de idiomas a través de historias)."
+      },
+      "status": null,
+      "title": "Hivepen — hivepen.com"
+    },
+    {
+      "description": {
+        "en": "Flutter app built on commission for a home baker: ingredient costs per product unit, with a personalised price factor. Signed Android release delivered.",
+        "es": "Aplicación Flutter construida por encargo para una repostera casera: costo de ingredientes por unidad de producto, con un factor de precio personalizado. Versión Android firmada entregada."
+      },
+      "status": {
+        "en": "Client work",
+        "es": "Trabajo por encargo"
+      },
+      "title": "Miazucar"
+    }
+  ],
+  "skills": [
+    {
+      "items": "TypeScript, JavaScript, HTML, CSS (SASS / SCSS), Kotlin, Dart, Python",
+      "label": {
+        "en": "Languages",
+        "es": "Lenguajes"
+      }
+    },
+    {
+      "items": "Vue 3, Nuxt, TailwindCSS, Quasar, React, Next.js, Flutter",
+      "label": {
+        "en": "Frontend",
+        "es": "Frontend"
+      }
+    },
+    {
+      "items": "Node.js, ExpressJS, Prisma, Zod, REST APIs, Supabase",
+      "label": {
+        "en": "Backend",
+        "es": "Backend"
+      }
+    },
+    {
+      "items": {
+        "en": "Kotlin, Jetpack Compose, USSD flows, biometric authentication",
+        "es": "Kotlin, Jetpack Compose, flujos USSD, autenticación biométrica"
+      },
+      "label": {
+        "en": "Mobile",
+        "es": "Móvil"
+      }
+    },
+    {
+      "items": {
+        "en": "Material 3 / Material You, design systems, Figma, Git, GitHub, LDAP integration",
+        "es": "Material 3 / Material You, sistemas de diseño, Figma, Git, GitHub, integración LDAP"
+      },
+      "label": {
+        "en": "Design and workflow",
+        "es": "Diseño y flujo de trabajo"
+      }
+    },
+    {
+      "items": {
+        "en": "Product thinking, client communication, technical demos, mentoring",
+        "es": "Pensamiento de producto, comunicación con clientes, demostraciones técnicas, mentoría"
+      },
+      "label": {
+        "en": "Strengths",
+        "es": "Fortalezas"
+      }
+    }
+  ],
+  "summary": {
+    "en": "Full-stack software engineer with a product mindset and {{YEARS}} of software development experience — from Vue and Quasar on university projects and my thesis (2020) to shipping web products for international clients (since 2023). Strong in TypeScript and JavaScript (Vue, Nuxt, React) and Node.js backends; currently building native Android (Kotlin, Jetpack Compose) and Flutter solo — designing for unreliable connectivity, with clear UX for slow or failed USSD and HTTP requests in low-reception areas — directing AI coding agents and verifying every result.",
+    "es": "Ingeniero de software full-stack con mentalidad de producto y {{YEARS}} de experiencia en desarrollo de software — desde Vue y Quasar en proyectos universitarios y mi tesis (2020) hasta el envío de productos web para clientes internacionales (desde 2023). Sólido en TypeScript y JavaScript (Vue, Nuxt, React) y backends en Node.js; actualmente construyendo Android nativo (Kotlin, Jetpack Compose) y Flutter en solitario — diseñando para conectividad poco fiable, con una UX clara para peticiones USSD y HTTP lentas o fallidas en zonas de baja recepción — dirigiendo agentes de código de IA y verificando cada resultado."
+  },
+  "ui": {
+    "cvNote": {
+      "en": "All files are generated from the same source and updated together.",
+      "es": "Todos los archivos se generan desde la misma fuente y se actualizan juntos."
+    },
+    "education": {
+      "en": "Education",
+      "es": "Educación"
+    },
+    "experience": {
+      "en": "Experience",
+      "es": "Experiencia"
+    },
+    "featuredProject": {
+      "en": "Featured project",
+      "es": "Proyecto destacado"
+    },
+    "footerContact": {
+      "en": "The fastest way to reach me is email",
+      "es": "La forma más rápida de contactarme es por correo"
+    },
+    "footerCv": {
+      "en": "My CV is always available here as",
+      "es": "Mi CV está siempre disponible aquí como"
+    },
+    "footerDate": {
+      "en": "November 2026",
+      "es": "noviembre de 2026"
+    },
+    "language": {
+      "en": "Language",
+      "es": "Idioma"
+    },
+    "languages": {
+      "en": "Languages",
+      "es": "Idiomas"
+    },
+    "moreProjects": {
+      "en": "More projects",
+      "es": "Más proyectos"
+    },
+    "or": {
+      "en": "or",
+      "es": "o"
+    },
+    "professionalSummary": {
+      "en": "Professional Summary",
+      "es": "Resumen profesional"
+    },
+    "skills": {
+      "en": "Technical skills",
+      "es": "Habilidades técnicas"
+    },
+    "summary": {
+      "en": "Summary",
+      "es": "Resumen"
+    }
+  }
+}

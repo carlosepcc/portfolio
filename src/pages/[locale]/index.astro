@@ -1,0 +1,19 @@
+---
+// Non-default locales at /<locale>/ — one static page per locale that has
+// complete translations in src/data/cv.json (today: es). A locale joins
+// this route by gaining translations; no code change needed.
+import cv from '../../data/cv.json';
+import { DEFAULT_LOCALE } from '../../lib/locales.js';
+import { getAvailableLocales } from '../../lib/i18n.js';
+import Portfolio from '../../components/Portfolio.astro';
+
+export function getStaticPaths() {
+  return getAvailableLocales(cv)
+    .filter((locale) => locale !== DEFAULT_LOCALE)
+    .map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+---
+
+<Portfolio locale={locale} />

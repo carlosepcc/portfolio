@@ -1,4 +1,9 @@
-/* Portfolio — plain CSS, system light/dark theme. No framework, no JS. */
+/* Portfolio — plain CSS, system light/dark theme. No framework, no JS.
+ *
+ * Minimalist by design: single column, generous whitespace, hairline
+ * dividers only. No cards, boxes, shadows, gradients or badges — the
+ * language switcher and the CV downloads are plain text links, and the
+ * only accent is the quiet teal used for links. */
 
 :root {
   --bg: #ffffff;
@@ -8,9 +13,6 @@
   --accent: #0e6b6e;
   --heading: #0f2a3d;
   --border: #e1e7eb;
-  --chip-bg: #f2f5f6;
-  --button-bg: #0e6b6e;
-  --button-text: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,15 +24,10 @@
     --accent: #5cc0b8;
     --heading: #dcebf0;
     --border: #24333b;
-    --chip-bg: #1a262c;
-    --button-bg: #2a8f88;
-    --button-text: #ffffff;
   }
 }
 
 * { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -38,7 +35,7 @@ body {
   color: var(--text);
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -46,15 +43,24 @@ a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 .wrap {
-  max-width: 720px;
+  max-width: 680px;
   margin: 0 auto;
-  padding: 48px 20px 64px;
+  padding: 56px 20px 72px;
 }
 
-header { margin-bottom: 40px; }
+header { margin-bottom: 48px; }
+
+.lang-switch {
+  font-size: 0.85rem;
+  color: var(--faint);
+  text-align: right;
+  margin: 0 0 32px;
+}
+.lang-switch a { color: var(--muted); }
+.lang-switch .current { color: var(--text); }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.9rem;
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--heading);
@@ -62,45 +68,22 @@ h1 {
 }
 
 .tagline {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--accent);
-  margin: 0 0 12px;
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin: 0 0 16px;
 }
 
 .contact {
   color: var(--muted);
   font-size: 0.95rem;
-  margin: 0 0 20px;
+  margin: 0 0 16px;
 }
 .contact a { color: var(--muted); }
 .contact a:hover { color: var(--accent); }
 
-.cv-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 0 0 8px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-weight: 600;
+.cv-links {
   font-size: 0.95rem;
-  line-height: 1.2;
-  border: 1px solid transparent;
-}
-.btn:hover { text-decoration: none; }
-
-.btn-primary { background: var(--button-bg); color: var(--button-text); }
-.btn-primary:hover { opacity: 0.9; }
-
-.btn-secondary {
-  background: transparent;
-  color: var(--accent);
-  border-color: var(--accent);
+  margin: 0 0 8px;
 }
 
 .cv-note {
@@ -109,7 +92,7 @@ h1 {
   margin: 0;
 }
 
-section { margin-bottom: 40px; }
+section { margin-bottom: 48px; }
 
 h2 {
   font-size: 0.8rem;
@@ -134,25 +117,11 @@ h3:first-of-type { margin-top: 0; }
   margin: 0 0 6px;
 }
 
+.status-text { color: var(--muted); }
+
 p { margin: 0 0 12px; }
 ul { margin: 0 0 12px; padding-left: 20px; }
 li { margin-bottom: 4px; }
-
-.skill-group { margin-bottom: 14px; }
-.skill-group .label { font-weight: 700; color: var(--heading); }
-
-.status {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--accent);
-  background: var(--chip-bg);
-  border-radius: 999px;
-  padding: 2px 10px;
-  margin-left: 8px;
-  vertical-align: middle;
-  white-space: nowrap;
-}
 
 .project-links { font-size: 0.9rem; color: var(--muted); }
 .project-links a { margin-right: 12px; }
@@ -166,5 +135,5 @@ footer {
 
 @media (max-width: 520px) {
   h1 { font-size: 1.7rem; }
-  .wrap { padding: 32px 18px 48px; }
+  .wrap { padding: 40px 18px 56px; }
 }
